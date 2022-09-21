@@ -274,7 +274,8 @@ def submit_job(
         kbatch_url,
         env,
     )
-
+    profile = data.pop('profile', profile)
+    
     code = code or data.pop("code", None)
     job = Job(**data)
 
